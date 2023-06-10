@@ -1,6 +1,6 @@
 # Tumour-Check
 
-This project explores the usage of Convolutional Neural Network (CNN) model in classifying MRI images to determine if the image indicates presence of tumour or no tumour in the brain of patients. Aside from predicting the presence of tumour in patients, it also explores possible ideas of programming architecture and data pipeline in preparation to load MRI images for training the model and predicting the images.
+This small-scale project explores the usage of Convolutional Neural Network (CNN) model in classifying MRI images to determine if the image indicates presence of tumour or no tumour in the brain of patients. Aside from predicting the presence of tumour in patients, it also explores possible ideas of programming architecture and data pipeline in preparation to load MRI images for training the model and predicting the images.
 
 ## Introduction/Background
 
