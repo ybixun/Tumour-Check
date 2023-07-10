@@ -10,7 +10,22 @@ This small-scale project materialised from my random thoughts about healthcare i
 
 ## Features
 
-1. Predicting if patient has tumour or no tumour based on MRI Image using a CNN model.
+- Predicting if patient has tumour or no tumour based on MRI Image using a CNN model.
+
+CNN Model
+
+1. Model Architecture: The model uses Convolutional Neural Network (CNN) model, consisting of 4 convolutional layers, 4 pooling layers, and 3 fully connected layers.
+
+2. Conv2D Layer: layers are given more filters as layer number increases since the initial layers will learn and scan lower level features such as the edges of the MRI images, and slowly learning the complex features as it goes down the layers. More complex features will require higher emphasis with more filters
+3x3 kernel size is being used for first 2 layers that will capture wider and more general details of simpler features while complex features are scrutinised further with the usage of 2x2 kernel size.
+
+3. Batch Normalisation: Usage of batch normalisation for more than 1 layers has shown to cause model to learn poorer, leading to worse performance.
+
+4. Learning Rate: Higher or lower than 0.00001 will impair the performance of the model.
+
+5. Regularisation and Dropout Layers: Using kernel regularisation at L1/L2 or dropout layers in different parts of the model seems to not improve the model very much despite being techniques to improve model's ability to generalise to unseen data.
+
+6. Data Augmentation: Different Data Augmentation techniques are used in the data pipeline as programmed in the image_generator function, such as vertical and horizontal flipping. These techniques are used to let the model train on more variations of MRI image, allowing the model to be more robust in prediction of brain tumour.
 
 # Usage
 
@@ -39,9 +54,7 @@ git clone https://github.com/[YourUsername]/[YourRepository].git
 cd [YourRepository]
 ```
 
-Additionally, a few Python packages are needed. Ensure that'requirements.txt' or 'environment.yml' file should be in the same directory where you are setting up the environment and dependencies. The dependencies can be installed by navigating to the project directory and running the following command:
-
-* Install the required Python packages using the requirements.txt file:
+*Additionally, a few Python packages are needed. Ensure that'requirements.txt' or 'environment.yml' file should be in the same directory where you are setting up the environment and dependencies. The dependencies can be installed by navigating to the project directory and running the following command:
 
 ```bash
 pip install -r requirements.txt
