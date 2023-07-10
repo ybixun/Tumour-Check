@@ -1,0 +1,11 @@
+name: TensorflowEnv
+channels:
+  - defaults
+dependencies:
+  - Python==3.10.9
+  - Flask==2.3.2
+  - numpy==1.23.5
+  - numpy==1.24.2
+  - Pillow==9.5.0
+  - tensorflow==2.11.0
+  - tensorflow_intel==2.11.0
